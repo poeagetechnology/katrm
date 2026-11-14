@@ -1,24 +1,28 @@
-import './index.css';
-import { Route, Routes } from 'react-router-dom';
-import Header from './Commponent/Header';
-import Footer from './Commponent/Footer';
-import Home from './Commponent/Home';
-import Contact from './Commponent/Contact';
 
-function App() {
+import React, { useState } from "react";
+import Intro from "./Pages/Intro";
+import Home from "./Commponent/Home";
+export default function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <>
+
+    
+      {showIntro ? (
+        <Intro onEnter={() => setShowIntro(true)} />
+      ) : (
+        <Home />
+      )}
+
+
+      
+   
+
+        
+     
+
+      
+    </>
   );
 }
-
-export default App;

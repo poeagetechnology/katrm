@@ -23,7 +23,7 @@ export default function Header() {
               <path d="M26 5h5v24h-5z" fill="currentColor" />
             </svg>
           </span>
-          <span className="brand-word">KATRM<span className="brand-period">.</span></span>
+          <span className="brand-word">KATRM<span className="brand-period">.</span>BUILDER'S</span>
         </Link>
 
         <button

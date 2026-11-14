@@ -31,6 +31,29 @@ body {
 
 body, button, input, select, textarea { font-family: var(--body); }
 
+.home-page {
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(227, 116, 82, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(29, 61, 52, 0.12), transparent 22%),
+    linear-gradient(180deg, #f6f4ee 0%, #f3f1eb 100%);
+  isolation: isolate;
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.18), transparent 22%, transparent 78%, rgba(255,255,255,0.12));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-page > * {
+  position: relative;
+  z-index: 1;
+}
+
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
