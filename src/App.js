@@ -10,7 +10,7 @@ export default function App() {
 
     
       {showIntro ? (
-        <Intro onEnter={() => setShowIntro(true)} />
+        <Intro onEnter={() => setShowIntro(false)} />
       ) : (
         <Home />
       )}
